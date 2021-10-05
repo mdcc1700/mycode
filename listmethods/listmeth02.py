@@ -11,7 +11,8 @@ print(proto)
 
 proto.extend("dns") # this line will add "dns" to the end of our list
 protoa.append("dns") # this line will add "dns" to the end of our list
-print(proto,"\n")
+print(proto)
+print(protoa,"\n")
 
 #define proto2 variable
 proto2 = [ 22, 80, 443, 53 ] # a list of common ports
