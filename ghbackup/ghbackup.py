@@ -35,12 +35,12 @@ def scan_for_arguments(git_comment):
 #    For sys.argv[], use '0' for current file, '2' to specify filenname 
 #  
 #        file_to_count_lines = open(os.path.basename(sys.argv[0]),"r")
-        file_to_count_lines = open(os.path.basename(sys.argv[2]),"r")
-        line_count = 0
-        for line in file_to_count_lines:
-              if line != "\n":
+        with open(os.path.basename(sys.argv[2]),"r") as file_to_count_lines:
+          line_count = 0
+          for line in file_to_count_lines:
+#              if line != "\n":
                 line_count +=1
-        file_to_count_lines.close()
+#        file_to_count_lines.close()
         print(line_count)
       elif currentArgument in ("-v", "--version"):
         print (os.path.basename(sys.argv[0]), version)
