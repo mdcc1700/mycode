@@ -35,7 +35,7 @@ def run_git_commands():
     os.system("touch mding.txt")
     os.system("git add *")
     os.system("git commit -m \"studying in logic\"")
-    os.system("git path origin")
+    os.system("git push origin")
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
     scan_for_arguments()

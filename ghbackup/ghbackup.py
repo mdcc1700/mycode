@@ -31,10 +31,12 @@ def scan_for_arguments():
     print("Error 101")
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def run_git_commands():
+    commit_message=input("Commit Comment: ")
     os.chdir("/home/student/mycode")
     os.system("touch mding.txt")
     os.system("git add *")
-    os.system("git commit -m \"studying in logic\"")
+#    os.system("git commit -m \"studying in logic\"")
+    os.system("git commit -m +commit_message+ ")
     os.system("git push origin")
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
