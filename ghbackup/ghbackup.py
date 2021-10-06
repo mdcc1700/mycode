@@ -19,9 +19,9 @@ import sys           # System-specific parameters and functions.
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def scan_for_arguments(git_comment):
   argumentList = sys.argv[1:]
-  options      = "c:v"
-  long_options = ["comment","version"]
-  version      = '1.3'
+  options      = "c:l:v"
+  long_options = ["comment","Line","version"]
+  version      = '1.4'
 #  input(">>> Beginning command line argument parsing.")
   try:
 #    input(">>> Press <Enter> to set <arguements> and <values>.")
@@ -29,6 +29,10 @@ def scan_for_arguments(git_comment):
     for currentArgument, currentValue in arguments:
       if currentArgument in ("-c", "--comment"):
         return currentValue 
+      elif currentArgument in ("-l", "--line"):
+        return currentValue 
+            file_to_count_lines = open(currentValue,"r")
+            print("Line count")
       elif currentArgument in ("-v", "--version"):
         print (os.path.basename(sys.argv[0]), version)
   except:
