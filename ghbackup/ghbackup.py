@@ -52,7 +52,7 @@ def main():
 #if len(sys.argv) == 1:
 # run_git_commands()
      comment=scan_for_arguments("")
-     print(comment)
+#     print(comment)
      run_git_commands(scan_for_arguments(""))
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 if __name__ == "__main__":
