@@ -21,7 +21,7 @@ def scan_for_arguments(git_comment):
   argumentList = sys.argv[1:]
   options      = "c:v"
   long_options = ["version"]
-  version      = '2.0'
+  version      = '1.2'
   try:
     arguments, values = getopt.getopt(argumentList, options, long_options)
     for currentArgument, currentValue in arguments:

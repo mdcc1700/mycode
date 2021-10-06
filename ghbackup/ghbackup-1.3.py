@@ -22,9 +22,7 @@ def scan_for_arguments(git_comment):
   options      = "c:v"
   long_options = ["comment","version"]
   version      = '1.3'
-#  input(">>> Beginning command line argument parsing.")
   try:
-#    input(">>> Press <Enter> to set <arguements> and <values>.")
     arguments, values = getopt.getopt(argumentList, options, long_options)
     for currentArgument, currentValue in arguments:
       if currentArgument in ("-c", "--comment"):
@@ -53,7 +51,7 @@ def main():
 # run_git_commands()
      comment=scan_for_arguments("")
      print(comment)
-     run_git_commands(scan_for_arguments(""))
+#     run_git_commands(scan_for_arguments(""))
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 if __name__ == "__main__":
      main()
