@@ -31,8 +31,8 @@ def scan_for_arguments(git_comment):
         return currentValue 
       elif currentArgument in ("-l", "--line"):
         return currentValue 
-            file_to_count_lines = open(currentValue,"r")
-            print("Line count")
+        file_to_count_lines = open(currentValue,"r")
+        print("Line count")
       elif currentArgument in ("-v", "--version"):
         print (os.path.basename(sys.argv[0]), version)
   except:
