@@ -39,15 +39,12 @@ def run_git_commands(git_comment):
       commit_message = git_comment
     else:
       commit_message = input("Commit Comment: ")
-#   commit.message=input("Commit Command: ")
     os.chdir("/home/student/mycode")
     os.system("git add *")
     os.system('git commit -m "'+commit_message+ '"')
     os.system("git push origin")
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
-#    scan_for_arguments()
-#    run_git_commands()
      run_git_commands(scan_for_arguments(""))
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 if __name__ == "__main__":
