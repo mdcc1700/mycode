@@ -1,5 +1,4 @@
 # alta3research-pythoncert01.py (Project Title)
-
 Objective is to demonstrate proficiency with library with needs an import.
 
 ## Getting Started
@@ -11,11 +10,16 @@ Program #4 reads CSV and export data into XLSX
 
 Source for original CSV (from Program #4)
 https://data.ontario.ca/dataset/f4f86e54-872d-43f8-8a86-3892fd3cb5e6/resource/8a88fe6d-d8fb-41a3-9d04-f0550a44999f/download/daily_change_in_cases_by_phu.csv
-### Prerequisites
 
+### Prerequisites
 "how to install python and python3 using apt."
+python3 -m pip install np
+python3 -m pip install matplotlib
+python3 -m pip install crayons
+python3 -m pip install pandas xlrd openpyxl
 
 ## Built With
+Python 3.6.9
 
 * [Python](https://www.python.org/) - The coding language used
 
