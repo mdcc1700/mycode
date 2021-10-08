@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 """
-    Date: 2021-10-08
-    From: Michael Ding, michael.ding@gmail.com
+          Date: 2021-10-08
+          From: Michael Ding, michael.ding@gmail.com
     Instructor: Mark Mollere
 
-    Subject: alta3research-pythoncert01.py
+       Subject: alta3research-pythoncert01.py
 
-    Creating Python script to automate git commands to Github
+    1st Program:
     - Make an API request to https://api.nasa.gov and display some portion of 
     the data returned in an easily read format
 
+    2nd Program:
     - Use Matplotlib to produce a graph
 
+    3rd Program:
     - Write a guessing game that uses the crayons library to post in green 
     YOU WIN when the correct answer is supplied
 
+    4th Program:
     - Use pandas to create a dataframe, and export some data into a format 
     of your choice
 """
@@ -102,19 +105,36 @@ def process_input():
             print(crayons.blue("\nGraph (~/static/cosine.png) is created."))
 
         elif user_input == "3":
+            # Generate an integer from 1 to 6 using random Module
             answer=random.randint(1,6)
+
+            # Ask user what their guess is between 1 to 6
             user_guess=int(input("Guess a number between 1 and 6: "))
+
+            # While guess number not equal to answer
             while user_guess != answer:
+
+            # Request user to guess again
                 user_guess=int(input("Wrong! Guess again: "))
+
+            # If guess number equals to answer
             if user_guess==answer:
+
+            # Print out 'You win' using crayon library in GREEN
                 print(crayons.green("YOU WIN"))
+
         elif user_input == "4":
+            # Using Panda, read CSV file 
             print(crayons.yellow("Using Pandas, reading CSV to Dataframe."))
             input("Press Enter to continue...")
+
+            # Read CSV into dataframe
             df = pd.read_csv ('covid_daily.csv')
+
+            # Display the dataframe
             print(df)
 
-            # writeout dataframe to Excel
+            # Write dataframe to Excel
             df.to_excel("/home/student/mycode/alta3research-python-cert/covid_daily.xlsx")
             df.to_excel("/home/student/static/covid_daily.xlsx")
             print(crayons.blue("\nDataframe to Excel (~/static/covid_daily.xlsx) is created."))
@@ -125,6 +145,7 @@ def process_input():
         sys.exit()
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
+    # Loope the main program until user selects 'q' or 'Q' to quit
     while True:
         print_menu()
         process_input()
